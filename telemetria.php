@@ -13,6 +13,17 @@ function contaPacchettiPersi(){
     return $pacchetti_persi;
 
 }
+//pacchettiValidi accetta un array di interi e restituisce un array di interi
+function pacchettiValidi($ping_grezzi){
+    $ping_validi = [];
+
+    foreach($ping_grezzi as $ping){
+        if($ping > 0){
+            $ping_validi[] = $ping;
+        }
+    }
+
+}
 
 // eleborazione dei dati ->  Backend
 $ping_grezzi = [45, 120, -1, 32, 210, 85, -1, 18, 95, 310, 45, 60, -1, 150, 28, 240,18, 72];
